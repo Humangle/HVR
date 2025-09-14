@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script	type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+					"three/addons/" : "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+				}
+			}
+		</script>
+		<script type="module" src="./index.js"></script>
+		<link rel="stylesheet" href="./main.css" />
+		<meta charset="utf-8" />
+		<meta name="keywords" content="HumAngle VR, HumAngle, Virtual Reality" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<meta property="og:title" content="HumAngle VR" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="HumAngle VR"
+		/>
+		<meta
+			property="og:image"
+			content=""
+		/>
+		<meta property="og:url" content="https://humangle.github.io/VRTourEditor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<title>HumAngle Interactive and VR</title>
+		<link rel="icon" href="https://humanglemedia.com/wp-content/uploads/2020/03/cropped-android-chrome-512x512-1-32x32.png" sizes="32x32">
+		<link rel="icon" href="https://humanglemedia.com/wp-content/uploads/2020/03/cropped-android-chrome-512x512-1-192x192.png" sizes="32x32">
+		<!--<link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">-->
+	</head>
+	<body>
+		<section id="VR">
+			<canvas id="container">
+			</canvas>
+			<video id="video" loop muted crossOrigin="anonymous" playsinline style="display:none;">
+				<source src="./video/humangle.mp4">
+			</video>
+			<div id="overview">
+				<img id="logo" src="./images/humangle-logo-full-colour-rgb.png">
+				<h1 id="copywrite">
+					Step inside the stories
+				</h1>
+			</div>
+		</section>
+		<section id="youtube">
+			<div style="display: flex;">
+				<p style="width: 560px; padding: 25px; display: block;">
+					This VR experience lets you spend a typical day with Musa in an IDP camp.
+					What is his life like now that he has been removed from his ancestral home?
+					How does he meet his family's needs as a father?<br><br>
+					
+					Follow Us on YouTube for more Immersive Documentaries<br><br>
+				</p>
+				<iframe width="560" height="315" style="padding-left: 24px;" 
+					src="https://www.youtube.com/embed/videoseries?si=3AKxnhnY62gcr1ni&amp;list=PLLKpNE2ahhxFGBgiiRalZkPO0DMseo1u-" 
+					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+		</section>
+		<section id="interactive">
+			<h2 style="padding-left: 10vw;">
+				
+			</h2>
+		</section>
+		<!--<section id="why">
+			<h2> Why VR For Journalism </h2>
+		</section>-->
+		<section id="tour">
+			
+		</section>
+		<section id="footer" style="display: grid; place-items: center;">
+			<h3 style="text-align: center;">
+				Subscribe to our Newsletter for updates on Innovative Reporting
+			</h3>
+			<a id="newsletter">Sign Up to our Newsletter</a>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+	color: #FFFFFF;
+	background: #000;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	z-index: -1;
+	cursor: grab;
+	background: #000;
+}
+#VRDoc {
+	position: relative;
+}
+#overview {
+	position: absolute;
+	z-index: 2;
+	top: 20vh;
+	left: 10vw;
+}
+#logo {
+	width: 30vw;
+	height: auto;
+}
+#youtube {
+	padding: 50px;
+	padding-left: 10vw;
+	background: url(`images/`);
+}
+p {
+	font-size: 20px;
+	margin: 0px;
+}
+#interactive {
+	margin: 0px;
+	padding: 0px;
+}
+#newsletter {
+	text-decoration: none;
+	text-align: center;
+	padding: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border-radius: 50px;
+	background: #22b2d7;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	cursor: pointer;
+}
