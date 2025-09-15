@@ -35,11 +35,8 @@ const init = () => {
 
 	const mesh = new THREE.Mesh(geometry, material);
 	scene.add(mesh);
-
 	
-	renderer.setAnimationLoop(render);
-	
-	function render() {
+	const render = () => {
 
 		lat = Math.max(-85, Math.min(85, lat));
 		phi = THREE.MathUtils.degToRad(90-lat);
@@ -55,16 +52,14 @@ const init = () => {
 
 	}
 	
-	function onWindowResize() {
-
-		camera.aspect = window.innerWidth/window.innerHeight;
+	const onWindowResize = () => {
+		camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
-
-		renderer.setSize(window.innerWidth, window.innerHeight);
-
+		
+		renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 	}
 
-	function onPointerDown(event) {
+	const onPointerDown = (event) => {
 
 		isUserInteracting = true;
 
@@ -76,7 +71,7 @@ const init = () => {
 
 	}
 
-	function onPointerMove(event) {
+	const onPointerMove = (event) => {
 
 		if (isUserInteracting === true) {
 
@@ -87,7 +82,7 @@ const init = () => {
 
 	}
 
-	function onPointerUp() {
+	const onPointerUp = () => {
 
 		isUserInteracting = false;
 
@@ -100,6 +95,8 @@ const init = () => {
 	//
 
 	window.addEventListener('resize', onWindowResize);
+	
+	renderer.setAnimationLoop(render);
 
 }
 
