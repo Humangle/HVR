@@ -116,7 +116,7 @@ p {
 #tour {
 	position: relative;
 	z-index: 5;
-	background: #000000;
+	background: #FFF;
 	padding: 10vw;
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -147,7 +147,7 @@ p {
 #footer {
 	position: relative;
 	z-index: 6;
-	background: #000000;
+	background: #FFFFFF;
 	padding: 10vw;
 	padding-top: 50px;
 	text-align: center;
