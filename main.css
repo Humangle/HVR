@@ -18,12 +18,10 @@ body {
 	padding: 0px;
 }
 #container {
-	height: 100vh;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
 	display: block;
-	background-color: #000000;
 	background-image: url('https://raw.githubusercontent.com/LearningMike/HVR/refs/heads/main/images/videopreview.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -168,6 +166,11 @@ p {
 	z-index: 6;
 }
 
+#taptoscroll{
+	position: fixed;
+	display: none;	
+}
+
 p a {
 	color: #22b2d7;
     font-weight: bold;
@@ -188,7 +191,7 @@ p a:hover {
 }
 
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	#doctext {
 		width: 70vw;
 	}
@@ -206,5 +209,16 @@ p a:hover {
 	}
 	.tourboxes {
 		width: 70vw;
+	}
+	#taptoscroll{
+		position: fixed;
+		display: block;
+		bottom: 15px;
+		left: 0px;
+		right: 0px;
+		text-align: center;
+		justify-content: center;
+		z-index: 7;
+		opacity: 0.5;
 	}
 }

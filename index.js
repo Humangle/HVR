@@ -1,27 +1,23 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
-const init = () => {
-	
-	/**let isUserInteracting = false, 
-		lon = 0, lat = 0,
-		phi = 0, theta = 0,
-		onPointerDownPointerX = 0,
-		onPointerDownPointerY = 0,
-		onPointerDownLon = 0,
-		onPointerDownLat = 0;
+document.getElementById("taptoscroll").addEventListener('click', () => {
+	document.getElementById("taptoscroll").style.display = "none";
+	document.getElementById("youtube").scrollIntoView({
+		behavior: 'smooth'
+    });
+});
 
-	//const distance = 0.5;*/
+const init = () => {
 
 	//canvas
 	const canvas = document.getElementById("container");
-	const renderer = new THREE.WebGLRenderer({canvas, antialias: false, alpha: true, premultipliedAlpha: false, precision: 'lowp', powerPreference: 'low-power'});
+	const renderer = new THREE.WebGLRenderer({canvas, antialias: false, alpha: true, premultipliedAlpha: false, precision: 'highp', powerPreference: 'low-power'});
 	renderer.setPixelRatio(1.0);
-	renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+	renderer.setSize(canvas.clientWidth, window.innerHeight);
 
-	const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 128);
+	const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 128);
 	camera.position.set(0, 1.6, 0);
-	console.log(camera.rotation.y);
 	
 	const controls = new OrbitControls(camera, renderer.domElement);
 	controls.target.set(0, 1.6, 0);
@@ -32,12 +28,9 @@ const init = () => {
 	controls.maxPolarAngle = Math.PI-0.8;
 	controls.minPolarAngle = 0.8;
 	controls.update();
-	console.log(camera.rotation.y);
 
 	const scene = new THREE.Scene();
-	scene.background = null;
 	const geometry = new THREE.SphereGeometry(100, 64, 32);
-	// invert the geometry on the x-axis so that all of the faces point inward
 	geometry.scale(-1, 1, 1);
 
 	const video = document.getElementById('video');
@@ -59,6 +52,14 @@ const init = () => {
 	}
 	
 	const render = () => {
+		if (window.innerHeight > window.innerWidth+(window.innerWidth/3)){
+			if (window.scrollY > (document.getElementById("container").clientHeight)/8){
+				document.getElementById("taptoscroll").style.display = "none";
+			} else {
+				document.getElementById("taptoscroll").style.display = "block";
+				document.getElementById("taptoscroll").innerHTML = "▽";
+			}
+		}
 
 		renderer.render(scene, camera);
 
